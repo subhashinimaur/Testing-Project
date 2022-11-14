@@ -1,11 +1,11 @@
 const mongoose=require("mongoose");
 // require('dotenv')
 // const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/mydatabse'
-const uri = "mongodb://localhost:27017/";
-const client = new MongoClient(uri);
+const uri = "mongodb://0.0.0.0:27017/mydatabase";
+// const client = new MongoClient(uri);
 
 // const MONGO_URL = process.env.MONGO_URL || 'mongodb+srv://HyperLeap:HyperLeap@123@cluster0.hasahlg.mongodb.net/mydatabse?retryWrites=true&w=majority'
-mongoose.connect(client)
+mongoose.connect(uri)
 .then(()=>{
     console.log('connection');
 }).catch((err)=>{

@@ -15,8 +15,6 @@ export NVM_DIR="$HOME/.nvm"
 sudo npm install
 
 
-
-
 sudo pkill node
 sudo pm2 delete express-app
 sudo pm2 start -i 1 npm --no-automation --name express-app  -- run start 

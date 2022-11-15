@@ -1,6 +1,4 @@
 const express=require("express");
-// require('dotenv')
-// require("./db/con")
 const router=require("./routes/route")
 const app=express()
 

@@ -10,7 +10,6 @@ nvm install node
 sudo npm install forever -g
 
 
-
 # install pm2 module globaly
 sudo npm install -g pm2
 sudo pm2 update

@@ -12,11 +12,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # loads nvm bash_completion (node is in path now)
 
 #install node modules
-npm install
+sudo npm install
+
 
 sudo pkill node
 sudo pm2 delete express-app
-sudo pm2 start -i 1 npm --no-automation --name express-app  -- run start
+sudo pm2 start -i 1 npm --no-automation --name express-app  -- run start 
 
 #start our node app in the background
 node app.js > app.out.log 2> app.err.log < /dev/null & 
+# pm2 restart nodejs-express-app >> /home/ec2-user/express-app-pipline/deploy.log ....

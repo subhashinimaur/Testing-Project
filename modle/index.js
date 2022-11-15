@@ -1,11 +1,11 @@
 const mongoose=require("mongoose");
 // require('dotenv')
-// const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/mydatabse'
-const uri = "mongodb://0.0.0.0:27017/mydatabase";
+const MONGO_URL = process.env.MONGO_URL || 'mongodb+srv://HyperLeap:HyperLeap123@cluster0.vkgaecz.mongodb.net/testingData?retryWrites=true&w=majority'
+// const uri = "mongodb://0.0.0.0:27017/mydatabase";
 // const client = new MongoClient(uri);
 
-// const MONGO_URL = process.env.MONGO_URL || 'mongodb+srv://HyperLeap:HyperLeap@123@cluster0.hasahlg.mongodb.net/mydatabse?retryWrites=true&w=majority'
-mongoose.connect(uri)
+// const MONGO_URL = process.env.MONGO_URL || 'mongodb+srv://HyperLeap:HyperLeap123@cluster0.hasahlg.mongodb.net/testingData?retryWrites=true&w=majority'
+mongoose.connect(MONGO_URL)
 .then(()=>{
     console.log('connection');
 }).catch((err)=>{
@@ -38,6 +38,6 @@ const menSchema=new mongoose.Schema({
 
 //we are creating a new collection
 
-const {Usersdetail}=new mongoose.model("Profile",menSchema)
+const {Usersdetail}=new mongoose.model("Profiles",menSchema)
 
 module.exports={Usersdetail}

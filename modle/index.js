@@ -4,7 +4,7 @@ const mongoose=require("mongoose");
 // const uri = "mongodb://0.0.0.0:27017/mydatabase";
 // const client = new MongoClient(uri);
 
-const MONGO_URL = process.env.MONGO_URL || 'mongodb+srv://user:user@cluster0.vkgaecz.mongodb.net/testingData?retryWrites=true&w=majority'
+const MONGO_URL = process.env.MONGO_URL || 'mongodb+srv://users:users@cluster0.vkgaecz.mongodb.net/testingData?retryWrites=true&w=majority'
 mongoose.connect(MONGO_URL)
 .then(()=>{
     console.log('connection');
